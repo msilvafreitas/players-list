@@ -4,9 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Players List</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Elephants FC | Players List</title>
 </head>
 <body>
-    
+    <header class="cabecalho">
+        
+    </header>
+
+    <div class="filtro">
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome" placeholder="Insira um nome"><br>
+        <label for="posicao">Posições:</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="GK">
+        <label for="GK">Goleiro</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="DC">
+        <label for="DC">Zagueiro</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="RB">
+        <label for="RB">Lateral Direito</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="LB">
+        <label for="LB">Lateral Esquerdo</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="CM">
+        <label for="CM">Meia</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="RW">
+        <label for="RW">Ponta Direita</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="LW">
+        <label for="LW">Ponta Esquerda</label><br>
+        <input type="checkbox" id="posicao" name="posicao" value="ST">
+        <label for="ST">Atacante</label><br>
+        <label for="idade">Idade:</label><br>
+        <input type="number" id="idade" name="idade" min="15" max="45" placeholder="Idade"><br>
+        <label for="hab">Habilide atual:</label><br>
+        <input type="checkbox" id="hab" name="hab" value="5">
+        <label for="5">Legend</label><br>
+        <input type="checkbox" id="hab" name="hab" value="4">
+        <label for="4">World Class</label><br>
+        <input type="checkbox" id="hab" name="hab" value="3">
+        <label for="3">Strong</label><br>
+        <input type="checkbox" id="hab" name="hab" value="2">
+        <label for="2">Average</label><br>
+        <input type="checkbox" id="hab" name="hab" value="1">
+        <label for="1">Weak</label><br>
+        <label for="pot">Habilide potencial:</label><br>
+        <input type="checkbox" id="pot" name="pot" value="5">
+        <label for="5">Legend</label><br>
+        <input type="checkbox" id="pot" name="pot" value="4">
+        <label for="4">World Class</label><br>
+        <input type="checkbox" id="pot" name="pot" value="3">
+        <label for="3">Strong</label><br>
+        <input type="checkbox" id="pot" name="pot" value="2">
+        <label for="2">Average</label><br>
+        <input type="checkbox" id="pot" name="pot" value="1">
+        <label for="1">Weak</label><br>
+    </div>   
+
+    <div class="lista">
+        <ol class="lista--jogadores">
+
+        </ol>
+    </div>
+
+
+
+    <footer class="rodape">
+
+    </footer>
+    <script type="text/javascript" src="data.json"></script>
+    <script type="javascript" src="script.js"></script>
+
 </body>
 </html>
