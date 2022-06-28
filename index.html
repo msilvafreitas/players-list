@@ -12,7 +12,7 @@
 </head>
 <body>
     <header class="cabecalho">
-        
+        Cabecalho
     </header>
 
     <div class="filtro">
@@ -36,7 +36,7 @@
         <input type="checkbox" id="posicao" name="posicao" value="ST">
         <label for="ST">Atacante</label><br>
         <label for="idade">Idade:</label><br>
-        <input type="number" id="idade" name="idade" min="15" max="45" placeholder="Idade"><br>
+        <input type="number" id="idade" name="idade" min="15" max="45" placeholder="Insira um valor"><br>
         <label for="hab">Habilide atual:</label><br>
         <input type="checkbox" id="hab" name="hab" value="5">
         <label for="5">Legend</label><br>
@@ -62,18 +62,39 @@
     </div>   
 
     <div class="lista">
-        <ol class="lista--jogadores">
+        <table class="lista--jogadores">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Posição</th>
+                    <th>Idade</th>
+                    <th>Habilidade atual</th>
+                    <th>Habilidade potencial</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="jogador">
+                    <td class="jogador--nome">Apeles Maia</td>
+                    <td class="jogadr--posicao">Goleiro</td>
+                    <td class="jogador--idade">32</td>
+                    <td class="jogador--hab">Legend</td>
+                    <td class="jogador--pot">Legend</td>
+                </tr>
+            </tbody>
 
-        </ol>
+            
+
+        </table>
     </div>
 
 
 
     <footer class="rodape">
-
+        Rodapé
     </footer>
     <script type="text/javascript" src="data.json"></script>
-    <script type="javascript" src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="filtra.js"></script>
 
 </body>
 </html>
