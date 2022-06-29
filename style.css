@@ -1,6 +1,11 @@
 body {
     display: grid;
     grid-template-columns: auto auto;
+    background-color: #22264D;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='200' height='100' patternUnits='userSpaceOnUse' patternTransform='scale(2.2)'%3E%3Cpath id='a' data-color='fill' fill='%23171A37' stroke='%23171A37' stroke-width='2' d='M50 100L0 50V0l50 50 50-50h0v50l-50 50z' style='--darkreader-inline-fill: %23dddad6%3B --darkreader-inline-stroke: %23dddad6%3B' data-darkreader-inline-fill='' data-darkreader-inline-stroke=''%3E%3C/path%3E%3Cuse xlink:href='%23a' x='100' y='-50'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='100' y='50'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='-100'%3E%3C/use%3E%3Cuse xlink:href='%23a' y='100'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='200'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='-100' y='-50'%3E%3C/use%3E%3Cuse xlink:href='%23a' x='-100' y='50'%3E%3C/use%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23p)' width='100%25' height='100%25'%3E%3C/rect%3E%3C/svg%3E");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .cabecalho {
@@ -10,17 +15,41 @@ body {
     padding: 30px;
     background-color: rgb(0, 255, 191);
     grid-column: 1 / span 4;
+    margin: 2rem;
+}
+
+.corpo {
+    display: flex;
+    justify-content: space-around;
 }
 
 
 .filtro {
-    display: flex;
+    /*display: flex; */
     color: rgb(0, 255, 191);
     flex-direction: column;
     background-color: rgb(19, 0, 187);;
-    padding: 4% 10%;
-    margin-left: 20%;
+    padding: 2rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
     grid-column: 1;
+    line-height: 1.8rem;
+}
+.lista {
+    width: 1000px;
+
+}
+
+
+.lista--jogadores {
+    width: 100%;
+    background-color: rgb(255, 249, 162);
+    height: 100px;
+    grid-column: 2 / span 3;
+    padding: 1rem 2rem;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8rem;
 }
 
 .rodape {
@@ -29,18 +58,11 @@ body {
     background-color: rgb(0, 255, 191);
     padding: 30px;
     grid-column: 1 / span 4;
+    margin: 2rem;
 }
 
-.lista--jogadores {
-    width: 100%;
-    background-color: rgb(255, 249, 162);
-    height: 100px;
-    grid-column: 2 / span 3;
-    padding: 1rem;
-    align-items: center;
-    text-align: center;
-}
 
 .invisivel {
     display: none;
 }
+
