@@ -19,45 +19,45 @@
         <label for="nome">Nome:</label><br>
         <input type="text" name="nome" id="nome" placeholder="Insira um nome"><br>
         <label for="posicao">Posições:</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="GK">
-        <label for="GK">Goleiro</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="DC">
-        <label for="DC">Zagueiro</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="RB">
-        <label for="RB">Lateral Direito</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="LB">
-        <label for="LB">Lateral Esquerdo</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="CM">
-        <label for="CM">Meia</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="RW">
-        <label for="RW">Ponta Direita</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="LW">
-        <label for="LW">Ponta Esquerda</label><br>
-        <input type="checkbox" id="posicao" name="posicao" value="ST">
-        <label for="ST">Atacante</label><br>
+        <input type="checkbox" id="goleiro" name="goleiro" value="Goleiro" checked>
+        <label for="Goleiro">Goleiro</label><br>
+        <input type="checkbox" id="zagueiro" name="zagueiro" value="Zagueiro" checked>
+        <label for="Zagueiro">Zagueiro</label><br>
+        <input type="checkbox" id="latdir" name="latdir" value="Lateral Direito" checked>
+        <label for="Lateral Direito">Lateral Direito</label><br>
+        <input type="checkbox" id="latesq" name="latesq" value="Lateral Esquerdo" checked>
+        <label for="Lateral Esquerdo">Lateral Esquerdo</label><br>
+        <input type="checkbox" id="meia" name="meia" value="Meia" checked>
+        <label for="Meia">Meia</label><br>
+        <input type="checkbox" id="pontadir" name="pontadir" value="Ponta Direita" checked>
+        <label for="Ponta Direita">Ponta Direita</label><br>
+        <input type="checkbox" id="pontaesq" name="pontaesq" value="Ponta Esquerda" checked>
+        <label for="Ponta Esquerda">Ponta Esquerda</label><br>
+        <input type="checkbox" id="atacante" name="atacante" value="Atacante" checked>
+        <label for="Atacante">Atacante</label><br>
         <label for="idade">Idade:</label><br>
-        <input type="number" id="idade" name="idade" min="15" max="45" placeholder="Insira um valor"><br>
+        <input type="number" id="idade--min" name="idade" min="15" max="45" placeholder="Min"><input type="number" id="idade--max" name="idade" min="15" max="45" placeholder="Max"><br>
         <label for="hab">Habilide atual:</label><br>
-        <input type="checkbox" id="hab" name="hab" value="5">
+        <input type="checkbox" id="leg" name="leg" value="5" checked>
         <label for="5">Legend</label><br>
-        <input type="checkbox" id="hab" name="hab" value="4">
+        <input type="checkbox" id="wc" name="wc" value="4" checked>
         <label for="4">World Class</label><br>
-        <input type="checkbox" id="hab" name="hab" value="3">
+        <input type="checkbox" id="stg" name="stg" value="3" checked>
         <label for="3">Strong</label><br>
-        <input type="checkbox" id="hab" name="hab" value="2">
+        <input type="checkbox" id="avg" name="avg" value="2" checked>
         <label for="2">Average</label><br>
-        <input type="checkbox" id="hab" name="hab" value="1">
+        <input type="checkbox" id="wk" name="wk" value="1" checked>
         <label for="1">Weak</label><br>
         <label for="pot">Habilide potencial:</label><br>
-        <input type="checkbox" id="pot" name="pot" value="5">
+        <input type="checkbox" id="pleg" name="pleg" value="5" checked>
         <label for="5">Legend</label><br>
-        <input type="checkbox" id="pot" name="pot" value="4">
+        <input type="checkbox" id="pwc" name="pwc" value="4" checked>
         <label for="4">World Class</label><br>
-        <input type="checkbox" id="pot" name="pot" value="3">
+        <input type="checkbox" id="pstg" name="pstg" value="3" checked>
         <label for="3">Strong</label><br>
-        <input type="checkbox" id="pot" name="pot" value="2">
+        <input type="checkbox" id="pavg" name="pavg" value="2" checked>
         <label for="2">Average</label><br>
-        <input type="checkbox" id="pot" name="pot" value="1">
+        <input type="checkbox" id="pwk" name="pwk" value="1" checked>
         <label for="1">Weak</label><br>
     </div>   
 
@@ -73,12 +73,19 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="jogador">
+                <tr class="jogador goleiro leg pleg">
                     <td class="jogador--nome">Apeles Maia</td>
                     <td class="jogadr--posicao">Goleiro</td>
                     <td class="jogador--idade">32</td>
                     <td class="jogador--hab">Legend</td>
                     <td class="jogador--pot">Legend</td>
+                </tr>
+                <tr class="jogador latdir wc pstg">
+                    <td class="jogador--nome">Demóstenes Figueiredo</td>
+                    <td class="jogadr--posicao">Lateral Direito</td>
+                    <td class="jogador--idade">29</td>
+                    <td class="jogador--hab">World Class</td>
+                    <td class="jogador--pot">Strong</td>
                 </tr>
             </tbody>
 
@@ -94,7 +101,12 @@
     </footer>
     <script type="text/javascript" src="data.json"></script>
     <script src="script.js"></script>
-    <script src="filtra.js"></script>
+    <script src="filtroNome.js"></script>
+    <script src="filtroPosicao.js"></script>
+    <script src="filtroIdade.js"></script>
+    <script src="filtroHab.js"></script>
+    <script src="filtroPot.js"></script>
+    
 
 </body>
 </html>
