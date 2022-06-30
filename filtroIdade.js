@@ -14,9 +14,7 @@ filtroIdadeMin.addEventListener("input", function() {
 
             if (expressao > idade) {
                 jogador.classList.add("invisivel");
-            } else {
-                jogador.classList.remove("invisivel");
-            }
+            } 
         }
     } else {
         for (var i = 0; i < jogadores.length; i++) {
@@ -38,9 +36,7 @@ filtroIdadeMax.addEventListener("input", function() {
 
             if (expressao < idade) {
                 jogador.classList.add("invisivel");
-            } else {
-                jogador.classList.remove("invisivel");
-            }
+            } 
         }
     } else {
         for (var i = 0; i < jogadores.length; i++) {

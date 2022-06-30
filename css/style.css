@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kumar+One&family=Kumar+One+Outline&display=swap');
+
+body {
+    
+    background-color: #22264D;
+    
+    
+}
+
+.navbar {
+    margin-bottom: 2rem;
+    
+}
+
+label {
+    padding: 0.5rem;
+}
+
+
+.cabecalho {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(0, 255, 191);
+    padding: 30px;
+    grid-column: 1 / span 4;
+    margin: 2rem;
+}
+
+.corpo {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.filtro {
+    /*display: flex; */
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    background-color: rgb(26, 26, 26);
+    padding: 2rem;
+    margin-left: 3rem;
+    margin-right: 2rem;
+    grid-column: 1;
+    line-height: 1.8rem;
+    width: 400px;
+    font-size: large;
+}
+
+.lista {
+    background-color: rgb(26, 26, 26);
+}
+
+.lista--jogadores {
+    width: 100%;
+    
+    color: white;
+    height: 100px;
+    grid-column: 1 / span 4;
+    padding: 1rem 2rem;
+    align-items: center;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.jogador:hover {
+    scale: 1.05;
+    transition: 0.1s;
+    color: black;
+}
+
+.jogador--nome {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.jogador--posicao {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.jogador--hab {
+    
+}
+
+.rodape {
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    
+    padding: 30px;
+    grid-column: 1 / span 4;
+    margin: 2rem;
+}
+
+
+.invisivel {
+    display: none;
+}
+

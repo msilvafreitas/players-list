@@ -5,255 +5,298 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+   <link rel="stylesheet" href="css/style.css">
     <title>Elephants FC | Players List</title>
 </head>
 <body>
-    <header class="cabecalho">
-        Cabecalho
-    </header>
+    <nav class="navbar navbar-dark bg-black navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+            Elephant FC</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Jogadores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Calendário</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">História</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Temporadas
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="#">S01</a></li>
+                  <li><a class="dropdown-item" href="#">S02</a></li>
+                  <li><a class="dropdown-item" href="#">S03</a></li>
+                  <li><a class="dropdown-item" href="#">S04</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     <div class="corpo">
-    <div class="filtro">
-        <label for="nome">Nome:</label><br>
-        <input type="text" name="nome" id="nome" placeholder="Insira um nome"><br>
-        <label for="posicao">Posições:</label><br>
-        <input type="checkbox" id="goleiro" name="goleiro" value="Goleiro" checked>
-        <label for="Goleiro">Goleiro</label><br>
-        <input type="checkbox" id="zagueiro" name="zagueiro" value="Zagueiro" checked>
-        <label for="Zagueiro">Zagueiro</label><br>
-        <input type="checkbox" id="latdir" name="latdir" value="Lateral Direito" checked>
-        <label for="Lateral Direito">Lateral Direito</label><br>
-        <input type="checkbox" id="latesq" name="latesq" value="Lateral Esquerdo" checked>
-        <label for="Lateral Esquerdo">Lateral Esquerdo</label><br>
-        <input type="checkbox" id="meia" name="meia" value="Meia" checked>
-        <label for="Meia">Meia</label><br>
-        <input type="checkbox" id="pontadir" name="pontadir" value="Ponta Direita" checked>
-        <label for="Ponta Direita">Ponta Direita</label><br>
-        <input type="checkbox" id="pontaesq" name="pontaesq" value="Ponta Esquerda" checked>
-        <label for="Ponta Esquerda">Ponta Esquerda</label><br>
-        <input type="checkbox" id="atacante" name="atacante" value="Atacante" checked>
-        <label for="Atacante">Atacante</label><br>
-        <label for="idade">Idade:</label><br>
-        <input type="number" id="idade--min" name="idade" min="15" max="45" placeholder="Min"><input type="number" id="idade--max" name="idade" min="15" max="45" placeholder="Max"><br>
-        <label for="hab">Habilide atual:</label><br>
-        <input type="checkbox" id="leg" name="leg" value="5" checked>
-        <label for="5">Legend</label><br>
-        <input type="checkbox" id="wc" name="wc" value="4" checked>
-        <label for="4">World Class</label><br>
-        <input type="checkbox" id="stg" name="stg" value="3" checked>
-        <label for="3">Strong</label><br>
-        <input type="checkbox" id="avg" name="avg" value="2" checked>
-        <label for="2">Average</label><br>
-        <input type="checkbox" id="wk" name="wk" value="1" checked>
-        <label for="1">Weak</label><br>
-        <label for="pot">Habilide potencial:</label><br>
-        <input type="checkbox" id="pleg" name="pleg" value="5" checked>
-        <label for="5">Legend</label><br>
-        <input type="checkbox" id="pwc" name="pwc" value="4" checked>
-        <label for="4">World Class</label><br>
-        <input type="checkbox" id="pstg" name="pstg" value="3" checked>
-        <label for="3">Strong</label><br>
-        <input type="checkbox" id="pavg" name="pavg" value="2" checked>
-        <label for="2">Average</label><br>
-        <input type="checkbox" id="pwk" name="pwk" value="1" checked>
-        <label for="1">Weak</label><br>
-    </div>   
+        <div class="filtro container rounded">
+            
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" placeholder="Insira um nome">
+              
 
-    <div class="lista">
-        <table class="lista--jogadores">
+            <label for="posicao" class="form-check-label">Posições:</label><br>
+            <input type="checkbox" class="form-check-input" id="goleiro" name="goleiro" value="Goleiro" checked>
+            <label class="form-check-label" for="Goleiro">Goleiro</label><br>
+            <input type="checkbox" class="form-check-input" id="zagueiro" name="zagueiro" value="Zagueiro" checked>
+            <label class="form-check-label" for="Zagueiro">Zagueiro</label><br>
+            <input type="checkbox" class="form-check-input" id="latdir" name="latdir" value="Lateral Direito" checked>
+            <label class="form-check-label" for="Lateral Direito">Lateral Direito</label><br>
+            <input type="checkbox" class="form-check-input" id="latesq" name="latesq" value="Lateral Esquerdo" checked>
+            <label class="form-check-label" for="Lateral Esquerdo">Lateral Esquerdo</label><br>
+            <input type="checkbox" class="form-check-input" id="meia" name="meia" value="Meia" checked>
+            <label class="form-check-label" for="Meia">Meia</label><br>
+            <input type="checkbox" class="form-check-input" id="pontadir" name="pontadir" value="Ponta Direita" checked>
+            <label class="form-check-label" for="Ponta Direita">Ponta Direita</label><br>
+            <input type="checkbox" class="form-check-input" id="pontaesq" name="pontaesq" value="Ponta Esquerda" checked>
+            <label class="form-check-label" for="Ponta Esquerda">Ponta Esquerda</label><br>
+            <input type="checkbox" class="form-check-input" id="atacante" name="atacante" value="Atacante" checked>
+            <label class="form-check-label" for="Atacante">Atacante</label><br>
+            <label for="idade" class="form-check-label">Idade:</label><br>
+            <input type="number" class="form-control" id="idade--min" name="idade" min="15" max="45" placeholder="Min"><input type="number" class="form-control" id="idade--max" name="idade" min="15" max="45" placeholder="Max"><br>
+            <label for="hab" class="form-check-label">Habilidade atual:</label><br>
+            <input type="checkbox" class="form-check-input" id="leg" name="leg" value="5" checked>
+            <label class="form-check-label" for="5">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="wc" name="wc" value="4" checked>
+            <label class="form-check-label" for="4">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="stg" name="stg" value="3" checked>
+            <label class="form-check-label" for="3">&#x2B50;&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="avg" name="avg" value="2" checked>
+            <label class="form-check-label" for="2">&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="wk" name="wk" value="1" checked>
+            <label class="form-check-label" for="1">&#x2B50;</label><br>
+            <label class="form-check-label" for="pot">Habilidade potencial:</label><br>
+            <input type="checkbox" class="form-check-input" id="pleg" name="pleg" value="5" checked>
+            <label class="form-check-label" for="5">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="pwc" name="pwc" value="4" checked>
+            <label class="form-check-label" for="4">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="pstg" name="pstg" value="3" checked>
+            <label class="form-check-label" for="3">&#x2B50;&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="pavg" name="pavg" value="2" checked>
+            <label class="form-check-label" for="2">&#x2B50;&#x2B50;</label><br>
+            <input type="checkbox" class="form-check-input" id="pwk" name="pwk" value="1" checked>
+            <label class="form-check-label" for="1">&#x2B50;</label><br>
+        </div>   
+
+    <div class="lista table-responsive container rounded">
+        <table class="table table-hover lista--jogadores">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Posição</th>
-                    <th>Idade</th>
-                    <th>Habilidade atual</th>
-                    <th>Habilidade potencial</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Posição</th>
+                    <th scope="col">Idade</th>
+                    <th scope="col">Habilidade atual</th>
+                    <th scope="col">Habilidade potencial</th>
                 </tr>
             </thead>
             <tbody>
                 <tr class="jogador goleiro leg pleg">
-                    <td class="jogador--nome">Apeles Maia</td>
-                    <td class="jogadr--posicao">Goleiro</td>
+                    <td class="jogador--nome" scope="row">Apeles Maia</td>
+                    <td class="badge text-bg-warning jogador--posicao">Goleiro</td>
                     <td class="jogador--idade">32</td>
-                    <td class="jogador--hab">Legend</td>
-                    <td class="jogador--pot">Legend</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                </tr>
+                <tr class="jogador goleiro avg pavg">
+                    <td class="jogador--nome" scope="row">Abhimanyu Vyas</td>
+                    <td class="badge text-bg-warning jogador--posicao">Goleiro</td>
+                    <td class="jogador--idade">28</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador zagueiro led pleg">
-                    <td class="jogador--nome">Arquibaldo Morgado</td>
-                    <td class="jogadr--posicao">Zagueiro</td>
+                    <td class="jogador--nome" scope="row">Arquibaldo Morgado</td>
+                    <td class="badge text-bg-primary jogador--posicao">Zagueiro</td>
                     <td class="jogador--idade">29</td>
-                    <td class="jogador--hab">Legend</td>
-                    <td class="jogador--pot">Legend</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador zagueiro led pwc">
-                    <td class="jogador--nome">Martel Mathis</td>
-                    <td class="jogadr--posicao">Zagueiro</td>
+                    <td class="jogador--nome scope="row"">Martel Mathis</td>
+                    <td class="badge text-bg-primary jogador--posicao">Zagueiro</td>
                     <td class="jogador--idade">20</td>
-                    <td class="jogador--hab">Legend</td>
-                    <td class="jogador--pot">World Class</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador zagueiro wc pstg">
-                    <td class="jogador--nome">Aarav Gade</td>
-                    <td class="jogadr--posicao">Zagueiro</td>
+                    <td class="jogador--nome scope="row"">Aarav Gade</td>
+                    <td class="badge text-bg-primary jogador--posicao">Zagueiro</td>
                     <td class="jogador--idade">30</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador zagueiro stg pavg">
-                    <td class="jogador--nome">Kashika Chadha</td>
-                    <td class="jogadr--posicao">Zagueiro</td>
+                    <td class="jogador--nome scope="row"">Kashika Chadha</td>
+                    <td class="badge text-bg-primary jogador--posicao">Zagueiro</td>
                     <td class="jogador--idade">29</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Average</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador zagueiro avg pavg">
-                    <td class="jogador--nome">Mckenzie Roper</td>
-                    <td class="jogadr--posicao">Zagueiro</td>
+                    <td class="jogador--nome scope="row"">Mckenzie Roper</td>
+                    <td class="badge text-bg-primary jogador--posicao">Zagueiro</td>
                     <td class="jogador--idade">28</td>
-                    <td class="jogador--hab">Average</td>
-                    <td class="jogador--pot">Average</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador latdir wc pstg">
-                    <td class="jogador--nome">Demóstenes Figueiredo</td>
-                    <td class="jogadr--posicao">Lateral Direito</td>
+                    <td class="jogador--nome scope="row"">Demóstenes Figueiredo</td>
+                    <td class="badge text-bg-info jogador--posicao">Lateral D</td>
                     <td class="jogador--idade">29</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador latdir wc pstg">
-                    <td class="jogador--nome">Bhagyasri Patla</td>
-                    <td class="jogadr--posicao">Lateral Direito</td>
+                    <td class="jogador--nome scope="row"">Bhagyasri Patla</td>
+                    <td class="badge text-bg-info jogador--posicao">Lateral D</td>
                     <td class="jogador--idade">27</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador latdir avg pstg">
-                    <td class="jogador--nome">Hussain Calvert</td>
-                    <td class="jogadr--posicao">Lateral Direito</td>
+                    <td class="jogador--nome scope="row"">Hussain Calvert</td>
+                    <td class="badge text-bg-info jogador--posicao">Lateral D</td>
                     <td class="jogador--idade">21</td>
-                    <td class="jogador--hab">Average</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador latesq wc pstg">
-                    <td class="jogador--nome">Ekemona Villela</td>
-                    <td class="jogadr--posicao">Lateral Esquerdo</td>
+                    <td class="jogador--nome scope="row"">Ekemona Villela</td>
+                    <td class="badge text-bg-info jogador--posicao">Lateral E</td>
                     <td class="jogador--idade">26</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador latesq avg pavg">
-                    <td class="jogador--nome">Chanchal Biswas</td>
-                    <td class="jogadr--posicao">Lateral Esquerdo</td>
+                    <td class="jogador--nome scope="row"">Chanchal Biswas</td>
+                    <td class="badge text-bg-info jogador--posicao">Lateral E</td>
                     <td class="jogador--idade">28</td>
-                    <td class="jogador--hab">Average</td>
-                    <td class="jogador--pot">Average</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador meia leg pleg">
-                    <td class="jogador--nome">Iona Flanagan</td>
-                    <td class="jogadr--posicao">Meia</td>
+                    <td class="jogador--nome scope="row"">Iona Flanagan</td>
+                    <td class="badge text-bg-success jogador--posicao">Meia</td>
                     <td class="jogador--idade">21</td>
-                    <td class="jogador--hab">Legend</td>
-                    <td class="jogador--pot">Legend</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador meia wc pstg">
-                    <td class="jogador--nome">Zarna Ramanathan</td>
-                    <td class="jogadr--posicao">Meia</td>
+                    <td class="jogador--nome scope="row"">Zarna Ramanathan</td>
+                    <td class="badge text-bg-success jogador--posicao">Meia</td>
                     <td class="jogador--idade">22</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador meia stg pstg">
-                    <td class="jogador--nome">Sebastião Lois</td>
-                    <td class="jogadr--posicao">Meia</td>
+                    <td class="jogador--nome scope="row"">Sebastião Lois</td>
+                    <td class="badge text-bg-success jogador--posicao">Meia</td>
                     <td class="jogador--idade">26</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador meia stg pstg">
-                    <td class="jogador--nome">Saarah Howells</td>
-                    <td class="jogadr--posicao">Meia</td>
+                    <td class="jogador--nome scope="row"">Saarah Howells</td>
+                    <td class="badge text-bg-success jogador--posicao">Meia</td>
                     <td class="jogador--idade">24</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador meia stg pstg">
-                    <td class="jogador--nome">Raksha Deshmukh</td>
-                    <td class="jogadr--posicao">Meia</td>
+                    <td class="jogador--nome scope="row"">Raksha Deshmukh</td>
+                    <td class="badge text-bg-success jogador--posicao">Meia</td>
                     <td class="jogador--idade">37</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador pontadir wc pstg">
-                    <td class="jogador--nome">Patience Carrico</td>
-                    <td class="jogadr--posicao">Ponta Direita</td>
+                    <td class="jogador--nome scope="row"">Patience Carrico</td>
+                    <td class="badge text-bg-danger jogador--posicao">Ponta D</td>
                     <td class="jogador--idade">29</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador pontadir stg pstg">
-                    <td class="jogador--nome">Musidora Machado</td>
-                    <td class="jogadr--posicao">Ponta Direita</td>
+                    <td class="jogador--nome scope="row"">Musidora Machado</td>
+                    <td class="badge text-bg-danger jogador--posicao">Ponta D</td>
                     <td class="jogador--idade">26</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador pontadir avg pleg">
-                    <td class="jogador--nome">Chao Wu</td>
-                    <td class="jogadr--posicao">Ponta Direita</td>
+                    <td class="jogador--nome scope="row"">Chao Wu</td>
+                    <td class="badge text-bg-danger jogador--posicao">Ponta D</td>
                     <td class="jogador--idade">21</td>
-                    <td class="jogador--hab">Average</td>
-                    <td class="jogador--pot">Legend</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador pontaesq stg pavg">
-                    <td class="jogador--nome">Schneider Dutra</td>
-                    <td class="jogadr--posicao">Ponta Esquerda</td>
+                    <td class="jogador--nome scope="row"">Schneider Dutra</td>
+                    <td class="badge text-bg-danger jogador--posicao">Ponta E</td>
                     <td class="jogador--idade">29</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Average</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador pontaesq stg pwc">
-                    <td class="jogador--nome">Jeon Choi</td>
-                    <td class="jogadr--posicao">Ponta Esquerda</td>
+                    <td class="jogador--nome scope="row"">Jeon Choi</td>
+                    <td class="badge text-bg-danger jogador--posicao">Ponta E</td>
                     <td class="jogador--idade">21</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">World Class</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador atacante wc pwc">
-                    <td class="jogador--nome">Om Salvi</td>
-                    <td class="jogadr--posicao">Atacante</td>
+                    <td class="jogador--nome scope="row"">Om Salvi</td>
+                    <td class="badge text-bg-danger jogador--posicao">Atacante</td>
                     <td class="jogador--idade">35</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">World Class</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador atacante wc pstg">
-                    <td class="jogador--nome">Nitesh Dass</td>
-                    <td class="jogadr--posicao">Atacante</td>
+                    <td class="jogador--nome scope="row"">Nitesh Dass</td>
+                    <td class="badge text-bg-danger jogador--posicao">Atacante</td>
                     <td class="jogador--idade">32</td>
-                    <td class="jogador--hab">World Class</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador atacante stg pstg">
-                    <td class="jogador--nome">Jaiden Townsend</td>
-                    <td class="jogadr--posicao">Atacante</td>
+                    <td class="jogador--nome scope="row"">Jaiden Townsend</td>
+                    <td class="badge text-bg-danger jogador--posicao">Atacante</td>
                     <td class="jogador--idade">29</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador atacante stg pstg">
-                    <td class="jogador--nome">Kiara Ravel</td>
-                    <td class="jogadr--posicao">Atacante</td>
+                    <td class="jogador--nome scope="row"">Kiara Ravel</td>
+                    <td class="badge text-bg-danger jogador--posicao">Atacante</td>
                     <td class="jogador--idade">26</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
                 <tr class="jogador atacante stg pstg">
-                    <td class="jogador--nome">Leo Owen</td>
-                    <td class="jogadr--posicao">Atacante</td>
+                    <td class="jogador--nome scope="row"">Leo Owen</td>
+                    <td class="badge text-bg-danger jogador--posicao">Atacante</td>
                     <td class="jogador--idade">20</td>
-                    <td class="jogador--hab">Strong</td>
-                    <td class="jogador--pot">Strong</td>
+                    <td class="jogador--hab">&#x2B50;&#x2B50;&#x2B50;</td>
+                    <td class="jogador--pot">&#x2B50;&#x2B50;&#x2B50;</td>
                 </tr>
             </tbody>
 
@@ -262,11 +305,18 @@
         </table>
     </div>
     </div>
+    
 
-
-    <footer class="rodape">
-        Rodapé
+    <footer class="rodape container">
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Criado por <a href="https://github.com/msilvafreitas">Matheus Freitas</a> em 2022</p>
+            </div>
+        </div>
     </footer>
+    </footer>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="data.json"></script>
     <script src="script.js"></script>
     <script src="filtroNome.js"></script>
@@ -274,6 +324,8 @@
     <script src="filtroIdade.js"></script>
     <script src="filtroHab.js"></script>
     <script src="filtroPot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
     
 
 </body>
