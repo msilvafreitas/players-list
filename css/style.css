@@ -16,10 +16,6 @@ label {
 }
 
 
-.corpo {
-    /*display: flex;
-    justify-content: space-around;*/
-}
 
 
 .filtro {
@@ -42,7 +38,6 @@ label {
 }
 
 .lista--jogadores {
-    
     
     color: white;
     height: 100px;
